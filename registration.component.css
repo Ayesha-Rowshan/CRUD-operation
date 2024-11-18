@@ -1,0 +1,113 @@
+p {
+    margin-left: 50px;
+  }
+p.f {
+    margin-left: 60px;
+  }
+p.g {
+    margin-left: 100px;
+  }
+ p.d {
+    margin-left: 60px;
+  }
+p.dep {
+    margin-left: 65px;
+  }
+p.add {
+    margin-left: 95px;
+  }
+p.e {
+    margin-left: 100px;
+  }
+p.a {
+    margin-left: 127px;
+  }
+p.p {
+    margin-left: 90px;
+  }
+p.c {
+    margin-left: 25px;
+  }
+button.btn.btn-secondary {
+    margin-left: 690px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-color: white;
+  }
+label.form-check-label {
+    margin-bottom: 10px;
+  }
+.btn-primary {
+    background-color: #fff;
+    color: black;
+    border-color: lightgray;
+    margin-right: 10px;
+  }
+  
+ 
+  textarea#address {
+    height: 200px;
+  }
+  
+  input#dob {
+    font-weight: bold;
+  }
+  
+  select#department {
+    font-weight: bold;
+  }
+  
+
+  label {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .form-check {
+    margin-top: 10px;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+  }
+  
+  .form-check-label {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+ 
+  .modal-dialog {
+    max-width: 800px;
+  }
+  
+  @media (max-width: 768px) {
+    p {
+      margin-left: 10px;
+    }
+  
+    .modal-dialog {
+      max-width: 90%;
+    }
+  
+    button.btn.btn-secondary {
+      margin-left: 0;
+    }
+  }
+  

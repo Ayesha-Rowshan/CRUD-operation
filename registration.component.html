@@ -1,0 +1,96 @@
+<div class="modal show d-block" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="studentModalLabel"><b>Student Registration</b></h5>
+        <button type="button" class="btn-close" (click)="closeModalForm()"></button>
+      </div>
+      <div class="modal-body">
+        <form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">
+          <div class="row mb-3">
+            <label for="studentName" class="col-md-3 col-form-label"><b>Student Name<a>:</a></b></label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="studentName" [(ngModel)]="student.name" name="studentName" placeholder="Enter Student Name" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="fatherName" class="col-md-3 col-form-label"><b>Father's Name <span class="c">:</span></b></label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="fatherName" [(ngModel)]="student.fatherName" name="fatherName" placeholder="Enter Father's Name" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="gender" class="col-md-3 col-form-label"><b>Gender<span class="d">:</span></b></label>
+            <div class="col-md-9 d-flex align-items-center">
+              <div class="form-check me-3">
+                <input class="form-check-input"type="radio"id="male" [(ngModel)]="student.gender" name="gender"value="Male"required/>
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="female" [(ngModel)]="student.gender" name="gender" value="Female"required/>
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="dob" class="col-md-3 col-form-label"><b>Date of Birth<span class="e">:</span></b></label>
+            <div class="col-md-9">
+              <input type="date" class="form-control" id="dob" [(ngModel)]="student.dob" name="dob" required>
+            </div>
+          </div>
+            <div class="row mb-3">
+            <label for="department" class="col-md-3 col-form-label"><b>Department<span class="f">:</span></b></label>
+            <div class="col-md-9">
+              <select id="department"class="form-control"[(ngModel)]="student.department" name="department" required>
+                <option *ngFor="let department of departments" [value]="department">
+                  {{ department }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="address" class="col-md-3 col-form-label"><b>Address<span class="g">:</span></b></label>
+            <div class="col-md-9">
+              <textarea class="form-control" id="address" [(ngModel)]="student.address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+            </div>
+          </div>
+           <div class="row mb-3">
+            <label for="email" class="col-md-3 col-form-label"><b>Email id<span class="h">:</span></b></label>
+            <div class="col-md-9">
+              <input type="email" class="form-control" id="email" [(ngModel)]="student.email" name="email" placeholder="Enter Email Address" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="age" class="col-md-3 col-form-label"><b>Age<span class="l">:</span></b></label>
+            <div class="col-md-9">
+              <input type="number" class="form-control" id="age" [(ngModel)]="student.age" name="age" placeholder="Enter Age" required>
+            </div>
+          </div>
+           <div class="row mb-3">
+            <label for="password" class="col-md-3 col-form-label"><b>Password<span class="j">:</span></b></label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" id="password" [(ngModel)]="student.password" name="password" placeholder="Enter Password" required>
+            </div>
+          </div>
+           <div class="row mb-3">
+            <label for="confirmPassword" class="col-md-3 col-form-label"><b>Confirm Password<span class="k">:</span></b></label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="student.confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+          </div>
+           <div class="row mb-3"> 
+            <div class="col-md-9 offset-md-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" [(ngModel)]="student.agreeTerms" name="agreeTerms" required>
+                <label class="form-check-label" for="terms">
+                  I agree to the Terms and Conditions
+                </label>
+              </div>
+            </div>
+             <button type="submit" class="btn btn-primary" style="width: 70px; margin-left: 210px;" >Submit</button>
+          </div>
+          <button type="button" class="btn btn-secondary" (click)="closeModalForm()">Close</button>
+  
+
+
+ 
